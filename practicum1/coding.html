@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="script.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="UTF-8">
+	<title>Coding</title>
+</head>
+<body>
+	<nav></nav>
+	<article>
+	<h1>Different Methods</h1>
+	
+	<p>There are multiple ways to attach an event handler to an element. Assume we have a button with the id <em>clickButton</em> that 
+	should trigger the function <em>myFunction</em> when it is clicked.</p>
+	
+	<p>The first option we could use is to call it from the onclick attribute in the html code. This would look like this:</p>
+	
+	<pre><code>&lt;button id = “clickButton” onclick = “myFunction()”&gt;Click me!&lt;/button&gt;</code></pre>
+
+	<p>The problem with this is that the code is in the html document with the other content. This makes it less organized and it
+	is generally preferable to keep coding and content separated. That way you can easily find everything in one document. If you 
+	want to change the code, you know that everything is stored in the JavaScript document, so you won’t need to make any changes 
+	to the html. Furthermore, it might be difficult to find the one small bit of coding between all of the other html content.</p>
+
+	<p>A second way to do it would be about the same as the first method, except done in JavaScript instead of html. This will
+	make it a lot easier if you want to update the code, as explained before. The code would look like this:</p>
+	
+	<pre><code>document.getElementById(“clickButton”).onclick = myFunction;</code></pre>
+
+	<p>The disadvantage of this is that if you try to add another function that should also be executed when clicking the button,
+	it will override the first one. So if there’s a chance a second function will be added later on, it’s probably better to use 
+	a different method.</p>
+	
+	<p>A third option is to use the addEventListener function. Unlike onclick, using this function multiple times will result in
+	multiple functions being attached to the event instead of replacing the previous one. However, Internet Explorer 8 and earlier
+	don’t support this function, and some people still use this browser. (src: https://www.netmarketshare.com/browser-market-share.aspx?qprid=2&qpcustomd=0)
+	For most features, you can probably ignore earlier browsers, but if it is absolutely necessary for <em>clickButton</em> to work in every
+	browser, you will have to solve it. Luckily, you can just use attachEvent for these browsers, which is almost the same as 
+	addEventListener. You’ll have to do some more typing, however. The code would look like this:</p>
+
+	<p>Without IE8 support:</p>
+	
+	<pre><code>document.getElementById(“clickButton”).addEventListener(“click”, myFunction);</code></pre>
+
+	<p>With IE8 support:</p>
+	
+	<pre><code>var btn = document.getElementById(“clickButton”);
+	if (btn.addEventListener)
+	    btn.addEventListener(“click”, myFunction”);
+	else
+	    btn.attachEvent(“onclick”, myFunction);</code></pre>
+
+	<p>The problem with both this method and the previous one is that even without IE8 support it is a lot of typing for such a
+	small thing. Aside from being more work, this also makes the code harder to read.</p>
+
+	<p>Which brings us to the final option that will be discussed here, using jQuery. Code that is pretty long to write in 
+	raw JavaScript are often a lot shorter in jQuery. This is no exception. It would look like this (assuming you use $ as short 
+	for jQuery):</p>
+	
+	<pre><code>$(“#clickButton”).click(myFunction);</code></pre>
+	
+	<p>This method does the same thing as the addEventListener with IE 8 support option, but it’s a lot shorter to write, and
+	easier to read.</p>
+	</article>
+</body>
+</html>
