@@ -1,0 +1,39 @@
+nav {
+	float: left;
+	margin-right: 10px;
+}
+
+nav ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+nav li {
+	font-size: 1.15em;
+	font-weight: bold;
+	font-family: "Times New Roman", Times, serif;
+	padding: 5px 8px;
+	border: 2px solid yellow;
+	background: darkblue;
+	margin: 3px;
+}
+
+nav a {
+	text-decoration: none;
+}
+
+nav a:link {
+	color: lightblue;
+}
+
+nav a:visited {
+	color: #b07300;
+}
+
+nav a:hover {
+	text-decoration: underline;
+}
+
+nav a:active {
+	background: #004080;
+}
