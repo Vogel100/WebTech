@@ -37,3 +37,7 @@ nav a:hover {
 nav a:active {
 	background: #004080;
 }
+
+.highlight {
+	 background: yellow;
+}
