@@ -20,7 +20,7 @@
 	
 	<p>The first option we could use is to call it from the onclick attribute in the html code. This would look like this:</p>
 	
-	<pre><code>&lt;button id = “clickButton” onclick = “myFunction()”&gt;Click me!&lt;/button&gt;</code></pre>
+	<pre><code>&lt;button id = "clickButton" onclick = "myFunction()"&gt;Click me!&lt;/button&gt;</code></pre>
 
 	<p>The problem with this is that the code is in the html document with the other content. This makes it less organized and it
 	is generally preferable to keep coding and content separated. That way you can easily find everything in one document. If you 
@@ -30,7 +30,7 @@
 	<p>A second way to do it would be about the same as the first method, except done in JavaScript instead of html. This will
 	make it a lot easier if you want to update the code, as explained before. The code would look like this:</p>
 	
-	<pre><code>document.getElementById(“clickButton”).onclick = myFunction;</code></pre>
+	<pre><code>document.getElementById("clickButton").onclick = myFunction;</code></pre>
 
 	<p>The disadvantage of this is that if you try to add another function that should also be executed when clicking the button,
 	it will override the first one. So if there’s a chance a second function will be added later on, it’s probably better to use 
@@ -46,15 +46,15 @@
 
 	<p>Without IE8 support:</p>
 	
-	<pre><code>document.getElementById(“clickButton”).addEventListener(“click”, myFunction);</code></pre>
+	<pre><code>document.getElementById("clickButton").addEventListener("click", myFunction);</code></pre>
 
 	<p>With IE8 support:</p>
 	
-	<pre><code>var btn = document.getElementById(“clickButton”);
+	<pre><code>var btn = document.getElementById("clickButton");
 	if (btn.addEventListener)
-	    btn.addEventListener(“click”, myFunction”);
+	    btn.addEventListener("click", myFunction);
 	else
-	    btn.attachEvent(“onclick”, myFunction);</code></pre>
+	    btn.attachEvent("onclick", myFunction);</code></pre>
 
 	<p>The problem with both this method and the previous one is that even without IE8 support it is a lot of typing for such a
 	small thing. Aside from being more work, this also makes the code harder to read.</p>
@@ -63,7 +63,7 @@
 	raw JavaScript are often a lot shorter in jQuery. This is no exception. It would look like this (assuming you use $ as short 
 	for jQuery):</p>
 	
-	<pre><code>$(“#clickButton”).click(myFunction);</code></pre>
+	<pre><code>$("#clickButton").click(myFunction);</code></pre>
 	
 	<p>This method does the same thing as the addEventListener with IE 8 support option, but it’s a lot shorter to write, and
 	easier to read.</p>
