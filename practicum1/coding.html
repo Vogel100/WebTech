@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script> 
 	<script src="script.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<meta charset="UTF-8">
@@ -36,10 +38,11 @@
 	
 	<p>A third option is to use the addEventListener function. Unlike onclick, using this function multiple times will result in
 	multiple functions being attached to the event instead of replacing the previous one. However, Internet Explorer 8 and earlier
-	don’t support this function, and some people still use this browser. <strong>(src: https://www.netmarketshare.com/browser-market-share.aspx?qprid=2&qpcustomd=0) REMOVE THIS LATER</strong>
-	For most features, you can probably ignore earlier browsers, but if it is absolutely necessary for <em>clickButton</em> to work in every
-	browser, you will have to solve it. Luckily, you can just use attachEvent for these browsers, which is almost the same as 
-	addEventListener. You’ll have to do some more typing, however. The code would look like this:</p>
+	don’t support this function, and <a href="https://www.netmarketshare.com/browser-market-share.aspx?qprid=2&qpcustomd=0">some
+	people still use this browser</a> (retrieved on March 2nd 2016). For most features, you can probably ignore earlier browsers,
+	but if it is absolutely necessary for <em>clickButton</em> to work in every browser, you will have to solve it. Luckily, you
+	can just use attachEvent for these browsers, which is almost the same as addEventListener. You’ll have to do some more typing,
+	however. The code would look like this:</p>
 
 	<p>Without IE8 support:</p>
 	
