@@ -41,3 +41,8 @@ nav a:active {
 .highlight {
 	 background: yellow;
 }
+
+.disabled {
+	pointer-events: none;
+	cursor: default;
+}
