@@ -27,6 +27,6 @@ $(function() {
 	});
 	if (refCount > 0)
 		$('article').append($refSection);
-	//Disable links to current page
+	//Disable links to the current page
 	$('a[href="' + location.pathname.split('/').pop() + '"]').addClass('disabled');
 });
