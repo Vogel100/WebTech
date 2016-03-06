@@ -3,14 +3,26 @@
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script src="script.js"></script>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<link rel="stylesheet" href="style.css">
 	<meta charset="UTF-8">
 	<title>Mechanics</title>
 </head>
 <body>
+	<header>DOM Event Handling</header>
 	<nav></nav>
-	<div id="content">
-	Here's some content about the inner mechanics of the DOM.
-	</div>
+	<article>
+		<h1>Mechanics</h1>
+		
+		<p>When an event is detected, the event handlers are executed in two phases, the capture phase and the bubble phase. 
+		During the capture phase, the top of the DOM tree is checked first and it goes down until the bottom node that was
+		triggered is reached. During the bubble phase, it is checked from the bottom to the top. This way, you can control which
+		event handlers should be executed first and which ones should be done later.  You can decide which phase they should be
+		done in by using the third optional parameter in the <em>addEventListener</em> function. If you set this parameter to
+		true, the event will be done in the capture phase, otherwise it will be done in the bubble phase. If you use a different
+		method of attaching event handlers or you omit the third parameter, it will be executed in the bubble phase by default.
+		This means that if you do not specify anything, the bottom node will be handled before its ancestors.</p>
+	</article>
 </body>
 </html>
