@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script> 
 	<script src="script.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<meta charset="UTF-8">
@@ -9,35 +11,36 @@
 </head>
 <body>
 	<nav></nav>
-	<div id="content">
-		<h1>Document Object Model</h1>
-			<p>The DOM (Document Object Model) a standard developed by W3C. The DOM is a standard
-			on how to access documents and their contents, and as such is separated in three parts: Core DOM, XML DOM and HTML DOM. This website is focusing on the HTML DOM.</p>
-			<p>The HTML DOM is both a model and a programming interface. It defines:</p>
-				<ul><li>The HTML elements as objects.</li>
-				<li>The properties of all HTML elements</li>
-				<li>The methods to access HTML elements</li>
-				<li>The events for all HTML elements</li></ul>
+	<article>
+	<h1>Document Object Model</h1>
+		<p>The DOM (Document Object Model) is a standard developed by W3C. It is is a standard
+		on how to access documents and their contents, and as such is separated in three parts: Core DOM, XML DOM and HTML DOM. This website is focusing on the HTML DOM.</p>
+		<p>The HTML DOM is both a model and a programming interface. It defines:</p>
+		
+		<ul><li>The HTML elements as objects.</li>
+		<li>The properties of all HTML elements</li>
+		<li>The methods to access HTML elements</li>
+		<li>The events for all HTML elements</li></ul>
 
-			<p>The HTML DOM tells you how to access, manipulate, add or remove HTML elements. </p>
-			<img src="images\DomTree.gif"></img>
-			<p>A DOM looks like (figuur 1). It’s a treelike model of a HTML document, where every element in the document is a node/object on the tree, with the document itself being the root node. Objects in this tree may be called upon or changed by using methods on the objects. </p>
-			<p>The HTML page that this tree represents looks like this:
-
-			<!-Code snippet (misschien expanden in een blok?)>
-			<pre><code>
-				&lthtml&gt
-				&lthead&gt
-					&lttitle&gtMy title”&lt/title&gt
-				&lt/head&gt
-					 &ltbody&gt
-						&lta href=””&gtMy link&lt/a&gt
-						&lth1&gtMy header&lt/h1&gt
-					&lt/body&gt
-				&lt/html&gt
-			</code></pre>
-			</p>
-			<p>Elements in the tree can be accessed by a manner of means, most notably their id, class, or tag. Traditional tree traversal is also a possibility: nodes can access their children, siblings can access the next or previous sibling, all nodes (except the root) can access their parent.</p>
-	</div>
+		<p>The HTML DOM tells you how to access, manipulate, add or remove HTML elements. </p>
+		<figure>
+			<img src="images\DomTree.gif" alt="DOM Tree">
+			<figcaption><strong>Figure 1:</strong> A DOM Tree</figcaption>
+		</figure>
+		<p>A DOM tree looks like figure 1. It’s a treelike model of an HTML document, where every element in the document is a node/object on the tree, with the document itself being the root node. Objects in this tree may be called upon or changed by using methods on the objects. </p>
+		<p>The HTML page that this tree represents looks like this:</p>
+		<pre><code>
+			&lt;html&gt;
+			&lt;head&gt;
+				&lt;title&gt;My title&lt;/title&gt;
+			&lt;/head&gt;
+				 &lt;body&gt;
+					&lt;a href=””&gt;My link&lt;/a&gt;
+					&lt;h1&gt;My header&lt;/h1&gt;
+				&lt;/body&gt;
+			&lt;/html&gt;
+		</code></pre>
+		<p>Elements in the tree can be accessed by a manner of means, most notably their id, class, or tag. Traditional tree traversal is also a possibility: nodes can access their children, siblings can access the next or previous sibling, all nodes (except the root) can access their parent.</p>
+	</article>
 </body>
 </html>
